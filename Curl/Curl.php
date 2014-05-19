@@ -40,23 +40,23 @@ class Curl extends Api
 
     public function put(Array $data)
     {
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT'));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($this->ch, CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT'));
+        curl_setopt($this->ch, CURLOPT_POSTFIELDS, $data);
         
         return $this;
     }
 
     public function post(Array $data)
     {
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($this->ch, CURLOPT_POST, 1);
+        curl_setopt($this->ch, CURLOPT_POSTFIELDS, $data);
         
         return $this;
     }
 
     public function delete()
     {
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+        curl_setopt($this->ch, CURLOPT_CUSTOMREQUEST, "DELETE");
         
         return $this;
     }
