@@ -1,8 +1,7 @@
-PHP Api Classes
+PHP Rest Client
 ---
 
-The Curl classes is also useful for Api calls or unit testing
-
+Includes a Curl class that provides a basic implementation for cURL
 
 sample:
 
